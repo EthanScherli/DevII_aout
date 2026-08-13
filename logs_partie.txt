@@ -1,0 +1,13 @@
+[2026-08-13 14:26:01] Commande: 'examiner' | Résultat: Une vieille bibliothèque poussiéreuse. Une horloge arrêtée indique minuit.
+[2026-08-13 14:26:07] Commande: 'cc' | Résultat: Je ne comprends pas cette commande. Essayez 'aller [direction]', 'prendre [objet]', 'examiner [objet/lieu]'.
+[2026-08-13 14:26:32] Commande: 'aller nord' | Résultat: Vous allez vers le nord.
+
+Un petit bureau sombre. Vous vous sentez observé.
+Vous voyez ici : Clé étrange.
+[2026-08-13 14:26:43] Commande: 'prendre Clé étrange' | Résultat: Vous avez pris : Clé étrange.
+[2026-08-13 14:26:47] Commande: 'aller sud' | Résultat: Vous allez vers le sud.
+
+La bibliothèque semble plus sombre depuis que vous avez pris la clé sur le bureau.
+[2026-08-13 14:26:52] Commande: 'aller sud' | Résultat: Vous ne pouvez pas aller par là : sud.
+[2026-08-13 14:27:00] Commande: 'examiner Clé étrange' | Résultat: Dans votre inventaire : Une clé rouillée avec un symbole de corbeau.
+[2026-08-13 14:27:54] Commande: '' | Résultat: Je ne comprends pas cette commande. Essayez 'aller [direction]', 'prendre [objet]', 'examiner [objet/lieu]'.
