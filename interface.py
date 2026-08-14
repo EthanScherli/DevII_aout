@@ -5,8 +5,8 @@ from main import initialiser_jeu
 class InterfaceJeu:
     def __init__(self, fenetre):
         self.fenetre = fenetre
-        self.fenetre.title("MiamCorp - Aventure Textuelle")
-        self.fenetre.geometry("850x500")
+        self.fenetre.title("MiamCorp - L'Éveil de la Relique")
+        self.fenetre.geometry("850x550")
         self.fenetre.configure(bg="black")
         
         self.joueur = initialiser_jeu()
@@ -69,6 +69,18 @@ class InterfaceJeu:
         self.ajouter_texte(reponse)
         
         self.mettre_a_jour_carte()
+        if self.joueur.possede_objet("Relique"):
+            self.declencher_fin()
+
+    def declencher_fin(self):
+        self.ajouter_texte("\n" + "="*50)
+        self.ajouter_texte(" FÉLICITATIONS !")
+        self.ajouter_texte(" Vous avez mis la main sur la Relique Maudite.")
+        self.ajouter_texte(" Les murs tremblent, la malédiction de la MiamCorp est levée !")
+        self.ajouter_texte(" --- FIN DU JEU ---")
+        self.ajouter_texte("="*50)
+        self.entree_commande.config(state=tk.DISABLED)
+        self.bouton_valider.config(state=tk.DISABLED)
 
     def mettre_a_jour_carte(self):
         self.canvas_carte.delete("all")
@@ -81,15 +93,27 @@ class InterfaceJeu:
         self.canvas_carte.create_text(100, 20, text="-- PLAN --", fill="lightgreen", font=("Courier", 12, "bold"))
         
         est_bureau = (self.joueur.lieu_actuel.nom == "Bureau Secret")
-        self.canvas_carte.create_rectangle(30, 60, 170, 120, fill=couleur_active if est_bureau else couleur_inactive)
-        self.canvas_carte.create_text(100, 90, text="Bureau Secret", fill=texte_actif if est_bureau else texte_inactif, font=("Courier", 9, "bold"))
+        self.canvas_carte.create_rectangle(30, 50, 170, 90, fill=couleur_active if est_bureau else couleur_inactive)
+        self.canvas_carte.create_text(100, 70, text="Bureau Secret", fill=texte_actif if est_bureau else texte_inactif, font=("Courier", 9, "bold"))
         
-        self.canvas_carte.create_line(100, 120, 100, 180, fill="lightgreen", width=2, dash=(4, 2))
+        self.canvas_carte.create_line(100, 90, 100, 130, fill="lightgreen", width=2, dash=(4, 2))
         
         est_biblio = (self.joueur.lieu_actuel.nom == "Bibliothèque")
-        self.canvas_carte.create_rectangle(30, 180, 170, 240, fill=couleur_active if est_biblio else couleur_inactive)
-        self.canvas_carte.create_text(100, 210, text="Bibliothèque", fill=texte_actif if est_biblio else texte_inactif, font=("Courier", 9, "bold"))
+        self.canvas_carte.create_rectangle(30, 130, 170, 170, fill=couleur_active if est_biblio else couleur_inactive)
+        self.canvas_carte.create_text(100, 150, text="Bibliothèque", fill=texte_actif if est_biblio else texte_inactif, font=("Courier", 9, "bold"))
 
+        self.canvas_carte.create_line(100, 170, 100, 210, fill="lightgreen", width=2, dash=(4, 2))
+
+        est_couloir = (self.joueur.lieu_actuel.nom == "Couloir Sombre")
+        self.canvas_carte.create_rectangle(30, 210, 170, 250, fill=couleur_active if est_couloir else couleur_inactive)
+        self.canvas_carte.create_text(100, 230, text="Couloir Sombre", fill=texte_actif if est_couloir else texte_inactif, font=("Courier", 9, "bold"))
+
+        self.canvas_carte.create_line(100, 250, 100, 290, fill="lightgreen", width=2, dash=(4, 2))
+
+        est_crypte = (self.joueur.lieu_actuel.nom == "Crypte")
+        self.canvas_carte.create_rectangle(30, 290, 170, 330, fill=couleur_active if est_crypte else couleur_inactive)
+        self.canvas_carte.create_text(100, 310, text="Crypte", fill=texte_actif if est_crypte else texte_inactif, font=("Courier", 9, "bold"))
+        
 if __name__ == "__main__":
     racine = tk.Tk()
     app = InterfaceJeu(racine)
