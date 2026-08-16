@@ -70,7 +70,10 @@ class InterfaceJeu:
         
         self.mettre_a_jour_carte()
         if self.joueur.possede_objet("Relique"):
-            self.declencher_fin()
+            if self.joueur.memoire.a_fait("chien_mort"):
+                self.declencher_fin_mauvaise()
+            else:
+                self.declencher_fin()
 
     def declencher_fin(self):
         self.ajouter_texte("\n" + "="*50)
@@ -78,6 +81,18 @@ class InterfaceJeu:
         self.ajouter_texte(" Vous avez mis la main sur la Relique Maudite.")
         self.ajouter_texte(" Les murs tremblent, la malédiction de la MiamCorp est levée !")
         self.ajouter_texte(" --- FIN DU JEU ---")
+        self.ajouter_texte("="*50)
+        self.entree_commande.config(state=tk.DISABLED)
+        self.bouton_valider.config(state=tk.DISABLED)
+
+    def declencher_fin_mauvaise(self):
+        self.ajouter_texte("\n" + "="*50)
+        self.ajouter_texte(" LA COLÈRE DU GARDIEN S'ABAT SUR VOUS !")
+        self.ajouter_texte(" Alors que vous saisissez la Relique avec triomphe, une ombre surgit dans votre dos.")
+        self.ajouter_texte(" C'est le Gardien. Le visage déformé par une haine pure, il vous poignarde à de multiples reprises.")
+        self.ajouter_texte(" « Ça, c'est pour mon chien... » murmure-t-il alors que votre vue s'obscurcit à jamais.")
+        self.ajouter_texte(" VOUS ÊTES MORT.")
+        self.ajouter_texte(" --- FIN DU JEU (MAUVAISE FIN) ---")
         self.ajouter_texte("="*50)
         self.entree_commande.config(state=tk.DISABLED)
         self.bouton_valider.config(state=tk.DISABLED)

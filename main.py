@@ -5,14 +5,14 @@ def initialiser_jeu():
     memoire = MemoireMonde()
     
     # 1. Création des lieux
+    bureau = Lieu("Bureau Secret", "Un petit bureau sombre. Le silence est tel qu'on pourrait presque s'y asseoir et attendre que le temps passe.")
     bibliotheque = Lieu("Bibliothèque", "Une vieille bibliothèque poussiéreuse. Une horloge arrêtée indique minuit.")
-    bureau = Lieu("Bureau Secret", "Un petit bureau sombre. Vous vous sentez observé.")
     couloir = Lieu("Couloir Sombre", "Un passage étroit et lugubre. La lourde porte au sud semble verrouillée.")
     crypte = Lieu("Crypte", "Le cœur du mystère. L'air y est glacial.")
     
     # 2. Évolution du monde
     bibliotheque.descriptions_alternatives["pris_Clé étrange"] = "La bibliothèque semble plus sombre depuis que vous avez pris la clé sur le bureau."
-    bibliotheque.descriptions_alternatives["chien_mort"] = "La bibliothèque est silencieuse. Une macabre flaque de sang s'étend sur le sol à l'endroit où se trouvait le chien."
+    bureau.descriptions_alternatives["chien_mort"] = "Le bureau est glacé. Une macabre flaque de sang s'étend sur le sol à l'endroit où se trouvait le chien."
     
     # 3. Création des objets
     cle = Objet("Clé étrange", "Une lourde clé en fer forgé avec un crâne gravé.")
@@ -31,11 +31,11 @@ def initialiser_jeu():
         dialogue_altere="Assassin... Monstre ! Tu as tué la seule chose que j'aimais ! Va-t'en !",
         condition_alteration="chien_mort"
     )
-    bibliotheque.ajouter_pnj(gardien)
+    bureau.ajouter_pnj(gardien)
     
     # 5. Connexions
     bibliotheque.ajouter_sortie("nord", bureau)
-    bibliotheque.ajouter_sortie("sud", couloir) # Ajout de l'accès au couloir
+    bibliotheque.ajouter_sortie("sud", couloir)
 
     bureau.ajouter_sortie("sud", bibliotheque) 
     
@@ -44,7 +44,8 @@ def initialiser_jeu():
 
     crypte.ajouter_sortie("nord", couloir)
     
-    return Joueur(bibliotheque, memoire)
+    # On commence dans le Bureau Secret
+    return Joueur(bureau, memoire)
 
 def demarrer():
     print("="*50)
