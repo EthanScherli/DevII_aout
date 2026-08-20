@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import scrolledtext
+import re
 from main import initialiser_jeu  
 
 class InterfaceJeu:
@@ -57,6 +58,8 @@ class InterfaceJeu:
         if not commande:
             return
 
+        commande = re.sub(r'\s+', ' ', commande)
+
         self.entree_commande.delete(0, tk.END)
 
         if commande.lower() in ["quitter", "exit", "quit"]:
@@ -96,6 +99,7 @@ class InterfaceJeu:
         self.ajouter_texte("="*50)
         self.entree_commande.config(state=tk.DISABLED)
         self.bouton_valider.config(state=tk.DISABLED)
+        self.fenetre.after(4000, lambda: self.fenetre.quit())
 
     def mettre_a_jour_carte(self):
         self.canvas_carte.delete("all")
