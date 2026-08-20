@@ -99,7 +99,7 @@ class InterfaceJeu:
         self.ajouter_texte("="*50)
         self.entree_commande.config(state=tk.DISABLED)
         self.bouton_valider.config(state=tk.DISABLED)
-        self.fenetre.after(4000, lambda: self.fenetre.quit())
+        self.fenetre.after(14000, lambda: self.fenetre.quit())
 
     def mettre_a_jour_carte(self):
         self.canvas_carte.delete("all")

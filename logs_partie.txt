@@ -50,3 +50,38 @@ Un passage étroit et lugubre. La lourde porte au sud semble verrouillée.
 Le cœur du mystère. L'air y est glacial.
 Vous voyez ici : Relique.
 [2026-08-16 15:30:15] Commande: 'prendre relique' | Résultat: Vous avez pris : Relique.
+[2026-08-20 17:01:06] Commande: 'examiner' | Résultat: Un petit bureau sombre. Le silence est tel qu'on pourrait presque s'y asseoir et attendre que le temps passe.
+Quelqu'un se trouve ici : Gardien. Un petit chien repose paisiblement à ses côtés.
+Vous voyez ici : Clé étrange.
+[2026-08-20 17:01:16] Commande: 'prendre Clé étrange' | Résultat: Vous avez pris : Clé étrange.
+[2026-08-20 17:01:25] Commande: 'attendre' | Résultat: Vous attendez dans le silence... Soudain, une pulsion sombre et incontrôlable s'empare de vous. Vos mains se mettent à trembler. Une voix effroyable murmure dans votre tête : 'Le chien... tue le chien...'
+[2026-08-20 17:01:31] Commande: 'parler Gardien' | Résultat: Gardien vous dévisage et dit : « Bonjour voyageur. Mon chien et moi veillons sur cet endroit depuis des siècles. Ne touchez à rien. »
+[2026-08-20 17:01:45] Commande: 'tuer chien' | Résultat: Empli d'une rage soudaine et irrationnelle, vous abattez le pauvre chien sans pitié. Le Gardien hurle de désespoir et vous regarde avec des yeux remplis de haine.
+[2026-08-20 17:01:50] Commande: 'parler gardien' | Résultat: Gardien vous dévisage et dit : « Assassin... Monstre ! Tu as tué la seule chose que j'aimais ! Va-t'en ! »
+[2026-08-20 17:01:56] Commande: 'avancer sud' | Résultat: Je ne comprends pas cette commande. Essayez 'aller [direction]', 'prendre [objet]', 'examiner [objet/lieu]'.
+[2026-08-20 17:01:59] Commande: 'aller sud' | Résultat: Vous allez vers le sud.
+
+La bibliothèque semble plus sombre depuis que vous avez pris la clé sur le bureau.
+Vous voyez ici : Parchemin.
+[2026-08-20 17:02:04] Commande: 'prendre parchemin' | Résultat: Vous avez pris : Parchemin.
+[2026-08-20 17:02:07] Commande: 'examiner parchemin' | Résultat: Dans votre inventaire : Note : 'La clé du savoir ouvre la porte des morts.'
+[2026-08-20 17:02:13] Commande: 'aller sud' | Résultat: Vous allez vers le sud.
+
+Un passage étroit et lugubre. La lourde porte au sud semble verrouillée.
+[2026-08-20 17:02:21] Commande: 'examiner clé étrange' | Résultat: Dans votre inventaire : Une lourde clé en fer forgé avec un crâne gravé.
+[2026-08-20 17:02:31] Commande: 'aller sud' | Résultat: Vous allez vers le sud.
+
+Le cœur du mystère. L'air y est glacial.
+Vous voyez ici : Relique.
+[2026-08-20 17:02:37] Commande: 'prendre relique' | Résultat: Vous avez pris : Relique.
+[2026-08-20 17:02:56] Commande: 'examiner' | Résultat: Un petit bureau sombre. Le silence est tel qu'on pourrait presque s'y asseoir et attendre que le temps passe.
+Quelqu'un se trouve ici : Gardien. Un petit chien repose paisiblement à ses côtés.
+Vous voyez ici : Clé étrange.
+[2026-08-20 17:03:01] Commande: 'aller sud' | Résultat: Vous allez vers le sud.
+
+Une vieille bibliothèque poussiéreuse. Une horloge arrêtée indique minuit.
+Vous voyez ici : Parchemin.
+[2026-08-20 17:03:02] Commande: 'aller sud' | Résultat: Vous allez vers le sud.
+
+Un passage étroit et lugubre. La lourde porte au sud semble verrouillée.
+[2026-08-20 17:03:06] Commande: 'aller sud' | Résultat: La porte de la Crypte est verrouillée. Il vous manque la bonne clé.
