@@ -39,6 +39,10 @@ class Lieu:
         self.descriptions_alternatives = {} 
 
     def ajouter_sortie(self, direction, lieu):
+        """
+        PRE: 'direction' est une string valide (ex: 'nord'), 'lieu' est une instance de la classe Lieu.
+        POST: Le dictionnaire 'self.sorties' est mis à jour avec la nouvelle direction pointant vers le lieu.
+        """
         self.sorties[direction] = lieu
 
     def ajouter_objet(self, objet):
@@ -48,6 +52,10 @@ class Lieu:
         self.pnjs.append(pnj)
 
     def retirer_objet(self, nom_objet):
+        """
+        PRE: 'nom_objet' est une string correspondant au nom d'un objet potentiellement dans la pièce.
+        POST: Si l'objet est trouvé, il est retiré de self.objets et retourné. Sinon, retourne None.
+        """
         for obj in self.objets:
             if obj.nom.lower() == nom_objet.lower():
                 self.objets.remove(obj)
